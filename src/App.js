@@ -18,6 +18,7 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         {this.state.showSearchPage ? (
+          // This is the Search component
           <div className="search-books">
             <div className="search-books-bar">
               <button className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</button>
@@ -40,11 +41,14 @@ class BooksApp extends React.Component {
           </div>
         ) : (
           <div className="list-books">
+            {/*  This is the Header component */}
             <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
+            
             <div className="list-books-content">
               <div>
+                {/*  This is the "Currently Reading" Shelf component */}
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Currently Reading</h2>
                   <div className="bookshelf-books">
@@ -88,6 +92,8 @@ class BooksApp extends React.Component {
                     </ol>
                   </div>
                 </div>
+
+                {/*  This is the "Want to Read" Shelf component */}
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Want to Read</h2>
                   <div className="bookshelf-books">
@@ -131,6 +137,8 @@ class BooksApp extends React.Component {
                     </ol>
                   </div>
                 </div>
+
+                {/*  This is the "Read" Shelf component */}
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Read</h2>
                   <div className="bookshelf-books">
