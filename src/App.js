@@ -16,12 +16,16 @@ class BooksApp extends React.Component {
     showSearchPage: false
   }
 
+  updateSearchPageState = state => {
+    this.setState({ showSearchPage: state })
+  }
+
   render() {
     return (
       <div className="app">
         {this.state.showSearchPage ? (
           // This is where the Search component is accessed.
-          <Search/>
+          <Search showSearchPage={this.updateSearchPageState}/>
         ) : (
           <div className="list-books">
             {/*  This is the Header component */}
