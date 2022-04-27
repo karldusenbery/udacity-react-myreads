@@ -4,6 +4,7 @@ import './App.css'
 import Shelves from './components/Shelves'
 import Search from './components/Search'
 import SearchButton from './components/SearchButton'
+import Header from './components/Header'
 import { Route } from 'react-router-dom'
 
 class BooksApp extends React.Component {
@@ -29,15 +30,14 @@ class BooksApp extends React.Component {
           <Search showSearchPage={this.updateSearchPageState}/>
         ) : (
           <div className="list-books">
-            {/*  This is the Header component */}
-            <div className="list-books-title">
-              <h1>MyReads</h1>
-            </div>
-            {/*  This is the Shelves component is displayed */}
+            {/*  This is where the Header component is displayed*/}
+            <Header/>
+
+            {/*  This is where the Shelves component is displayed */}
             <Shelves/>
             
 
-            {/*  This is where the SearchButton component is accessed*/}
+            {/*  This is where the SearchButton component is displayed and accessed*/}
             <SearchButton showSearchPage={this.updateSearchPageState}/>
           </div>
         )}
