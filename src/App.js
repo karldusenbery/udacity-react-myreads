@@ -3,6 +3,7 @@ import React from 'react'
 import './App.css'
 import Shelves from './components/Shelves'
 import Search from './components/Search'
+import SearchButton from './components/SearchButton'
 import { Route } from 'react-router-dom'
 
 class BooksApp extends React.Component {
@@ -32,14 +33,12 @@ class BooksApp extends React.Component {
             <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
-            {/*  This is the Shelves component was */}
+            {/*  This is the Shelves component is displayed */}
             <Shelves/>
             
 
-            {/*  This is the SearchButton component */}
-            <div className="open-search">
-              <button onClick={() => this.setState({ showSearchPage: true })}>Add a book</button>
-            </div>
+            {/*  This is where the SearchButton component is accessed*/}
+            <SearchButton showSearchPage={this.updateSearchPageState}/>
           </div>
         )}
       </div>
